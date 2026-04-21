@@ -1,60 +1,62 @@
-# BragDoc - Rastreador de Conquistas Profissionais
+# BragDev — Professional Achievements Tracker
 
-Rastreie e mostre suas conquistas profissionais com insights alimentados por IA a partir de suas contribuições no GitHub.
+Track and showcase your professional achievements with AI-powered insights generated from your GitHub contributions.
 
-## 🚀 Funcionalidades
+## 🚀 Features
 
-- 🔐 **Autenticação OAuth do GitHub** - Login seguro com sua conta GitHub
-- 📊 **Integração com GitHub** - Importe commits, pull requests e issues automaticamente
-- 🤖 **Análise Alimentada por IA** - Gere resumos inteligentes do seu trabalho com prompts personalizados
-- 📅 **Períodos de Tempo Flexíveis** - Analise conquistas por dia, semana, mês ou intervalos personalizados
-- 📈 **Relatórios Visuais** - Gráficos e insights bonitos sobre suas contribuições
-- 🎨 **Interface Moderna** - Design limpo e responsivo com tema escuro
+- 🔐 **GitHub OAuth Authentication** — Secure sign-in with your GitHub account
+- 📊 **GitHub Integration** — Import commits, pull requests, and issues automatically
+- 🤖 **AI-Powered Analysis** — Generate smart summaries of your work with customizable prompts
+- 📅 **Flexible Time Ranges** — Analyze achievements by day, week, month, or custom ranges
+- 📈 **Visual Reports** — Beautiful charts and insights about your contributions
+- 🎨 **Modern UI** — Clean, responsive layout with dark theme support
 
-## 🛠️ Stack Tecnológico
+## 🛠️ Tech Stack
 
 ### Frontend
-- **Angular 21** - Componentes standalone com signals
-- **TypeScript** - Verificação de tipos rigorosa
-- **PrimeNG** - Biblioteca de componentes UI
-- **RxJS** - Programação reativa
-- **Vite** - Ferramenta de build rápida
 
-### Melhores Práticas
-- ✅ Componentes standalone (sem NgModules)
-- ✅ Signals para gerenciamento de estado
-- ✅ Detecção de mudanças OnPush
-- ✅ Lazy loading de rotas
-- ✅ Guards e interceptors funcionais
-- ✅ `provideAppInitializer` moderno (sem APIs depreciadas)
-- ✅ Função `inject()` ao invés de injeção via construtor
-- ✅ Formulários reativos
-- ✅ Conformidade com acessibilidade WCAG AA
+- **Angular 21** — Standalone components with signals
+- **TypeScript** — Strict type checking
+- **PrimeNG** — UI component library
+- **RxJS** — Reactive programming
+- **Vite** — Fast build tooling
 
-## 📋 Pré-requisitos
+### Best Practices
 
-- Node.js 21+ e npm
+- ✅ Standalone components (no NgModules)
+- ✅ Signals for state management
+- ✅ `OnPush` change detection
+- ✅ Lazy-loaded feature routes
+- ✅ Functional guards and interceptors
+- ✅ Modern `provideAppInitializer` usage (no deprecated APIs)
+- ✅ Use `inject()` instead of constructor injection where appropriate
+- ✅ Reactive forms
+- ✅ WCAG AA accessibility compliance
+
+## 📋 Prerequisites
+
+- Node.js 21+ and npm
 - Angular CLI 21+
-- API backend rodando (veja o repositório backend)
+- Backend API running (see the backend repository)
 
-## 🚀 Começando
+## 🚀 Getting Started
 
-### 1. Clone o repositório
+### 1. Clone the repository
 
 ```bash
-git clone <url-do-repositório>
-cd bragdoc-frontend
+git clone https://github.com/farigab/bragdev-angular.git
+cd bragdev-angular
 ```
 
-### 2. Instale as dependências
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Configure o ambiente
+### 3. Configure the environment
 
-Crie ou atualize `src/environments/environment.ts`:
+Create or update `src/environments/environment.ts`:
 
 ```typescript
 export const environment = {
@@ -63,86 +65,86 @@ export const environment = {
 };
 ```
 
-Para produção, atualize `src/environments/environment.prod.ts`:
+For production, update `src/environments/environment.prod.ts`:
 
 ```typescript
 export const environment = {
   production: true,
-  apiUrl: 'https://seu-dominio-api.com/api'
+  apiUrl: 'https://your-api-domain.com/api'
 };
 ```
 
-### 4. Execute o servidor de desenvolvimento
+### 4. Run the development server
 
 ```bash
 npm start
 ```
 
-Navegue para `http://localhost:4200/`
+Open `http://localhost:4200/`
 
-### 5. Build para produção
+### 5. Build for production
 
 ```bash
 npm run build
 ```
 
-Os artefatos de build serão armazenados no diretório `dist/`.
+Build artifacts will be stored in the `dist/` directory.
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
-```
+```text
 src/
 ├── app/
 │   ├── components/
-│   │   ├── github-import/     # Assistente de integração GitHub
-│   │   ├── layout/            # Wrapper do layout principal
-│   │   ├── login/             # Páginas de autenticação
-│   │   └── reports/           # Relatórios e análises
+│   │   ├── github-import/     # GitHub import assistant
+│   │   ├── layout/            # Main layout wrapper
+│   │   ├── login/             # Authentication pages
+│   │   └── reports/           # Reports and analysis
 │   ├── guards/
-│   │   └── auth.guard.ts      # Proteção de rotas
+│   │   └── auth.guard.ts      # Route protection
 │   ├── interceptors/
-│   │   └── auth.interceptor.ts # Interceptor HTTP de autenticação
-│   ├── models/                # Interfaces TypeScript
+│   │   └── auth.interceptor.ts # HTTP authentication interceptor
+│   ├── models/                # TypeScript interfaces
 │   ├── pipes/
-│   │   └── markdown.pipe.ts   # Renderização de Markdown
-│   ├── services/              # Lógica de negócios
-│   ├── app.component.ts       # Componente raiz
-│   ├── app.config.ts          # Configuração da aplicação
-│   └── app.routes.ts          # Definições de rotas
-├── assets/                    # Arquivos estáticos
-├── environments/              # Configurações de ambiente
-└── styles.css                 # Estilos globais
+│   │   └── markdown.pipe.ts   # Markdown rendering
+│   ├── services/              # Business logic and API services
+│   ├── app.component.ts       # Root component
+│   ├── app.config.ts          # Application configuration
+│   └── app.routes.ts          # Route definitions
+├── assets/                    # Static assets
+├── environments/              # Environment configs
+└── styles.css                 # Global styles
 ```
 
-## 🔑 Componentes Principais
+## 🔑 Key Components
 
-### Fluxo de Autenticação
+### Authentication Flow
 
-1. Usuário clica em "Login com GitHub"
-2. Redirecionado para OAuth do GitHub
-3. Callback tratado pelo `AuthCallbackComponent`
-4. Sessão validada via `provideAppInitializer`
-5. Dados do usuário cacheados no `AuthService`
+1. User clicks "Sign in with GitHub"
+2. User is redirected to GitHub OAuth
+3. Callback is handled by `AuthCallbackComponent`
+4. Session initialization runs via `provideAppInitializer`
+5. User data cached in `AuthService`
 
-### Assistente de Importação do GitHub
+### GitHub Import Assistant
 
-**Processo de 4 Etapas:**
+4-Step import flow:
 
-1. **Conectar** - Inserir Token de Acesso Pessoal do GitHub
-2. **Repositórios** - Selecionar repositórios para analisar
-3. **Período de Tempo** - Escolher intervalo de datas (predefinidos ou personalizado)
-4. **Análise IA** - Personalizar prompt e gerar insights
+1. **Connect** — Provide a GitHub personal access token
+2. **Repositories** — Choose which repositories to analyze
+3. **Time Range** — Pick a date range (preset or custom)
+4. **AI Analysis** — Customize the prompt and generate insights
 
-### Gerenciamento de Estado
+### State Management
 
-- **Signals** para estado local reativo
-- **Computed signals** para estado derivado
-- **RxJS** para operações assíncronas
-- **Interceptor HTTP** para gerenciamento de sessão
+- **Signals** for local reactive state
+- **Computed signals** for derived state
+- **RxJS** for async flows and side effects
+- **HTTP interceptor** for session handling
 
-## 🎨 Sistema de Design
+## 🎨 Design System
 
-Sistema de design personalizado baseado em propriedades customizadas CSS:
+Custom design system based on CSS custom properties:
 
 ```css
 :root {
@@ -154,74 +156,75 @@ Sistema de design personalizado baseado em propriedades customizadas CSS:
 }
 ```
 
-### Escala de Espaçamento (Base 8px)
+### Spacing Scale (8px base)
+
 - `--spacing-xs: 4px`
 - `--spacing-sm: 8px`
 - `--spacing-md: 16px`
 - `--spacing-lg: 24px`
 - `--spacing-xl: 32px`
 
-## 🧪 Testes
+## 🧪 Tests
 
 ```bash
-# Executar testes unitários
+# Run unit tests
 npm test
 
-# Executar testes e2e
+# Run e2e tests
 npm run e2e
 ```
 
-## 🔒 Segurança
+## 🔒 Security
 
-- **Cookies HttpOnly** para gerenciamento de sessão
-- **Proteção CSRF** via backend
-- **Fluxo OAuth seguro** com parâmetro state
-- **Proteção XSS** via DOMPurify (sanitização de markdown)
-- **Sem localStorage** para dados sensíveis
+- **HttpOnly cookies** for session management
+- **CSRF protection** enforced by the backend
+- **Secure OAuth flow** with `state` parameter
+- **XSS protection** by sanitizing markdown (e.g., DOMPurify)
+- **No sensitive data in localStorage**
 
-## 🌐 Suporte de Navegadores
+## 🌐 Browser Support
 
-- Chrome/Edge (últimas 2 versões)
-- Firefox (últimas 2 versões)
-- Safari (últimas 2 versões)
+- Chrome/Edge (latest 2 versions)
+- Firefox (latest 2 versions)
+- Safari (latest 2 versions)
 
-## 📝 Variáveis de Ambiente
+## 📝 Environment Variables
 
-| Variável | Descrição | Padrão |
-|----------|-----------|--------|
-| `apiUrl` | URL da API backend | `http://localhost:8080/api` |
+| Variable | Description            | Default                      |
+|----------|------------------------|------------------------------|
+| `apiUrl` | Backend API base URL   | `http://localhost:8080/api`  |
 
-## 🤝 Contribuindo
+## 🤝 Contributing
 
-1. Faça um fork do repositório
-2. Crie uma branch de feature (`git checkout -b feature/funcionalidade-incrivel`)
-3. Siga o guia de estilo do Angular e as convenções do projeto
-4. Garanta que todos os testes passem
-5. Commit suas mudanças (`git commit -m 'Adiciona funcionalidade incrível'`)
-6. Push para a branch (`git push origin feature/funcionalidade-incrivel`)
-7. Abra um Pull Request
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/awesome-feature`)
+3. Follow the Angular style guide and project conventions
+4. Ensure tests pass
+5. Commit your changes (`git commit -m 'Add awesome feature'`)
+6. Push the branch (`git push origin feature/awesome-feature`)
+7. Open a Pull Request
 
-### Estilo de Código
+### Code Style
 
-- Use `prettier` para formatação
-- Siga as convenções de nomenclatura do Angular
-- Escreva mensagens de commit significativas
-- Adicione comentários JSDoc para APIs públicas
+- Use `prettier` for formatting
+- Follow Angular naming conventions
+- Write meaningful commit messages
+- Add JSDoc comments for public APIs
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
+This project is licensed under the MIT License — see the LICENSE file for details.
 
-## 👤 Autor
+## 👤 Author
 
-**farigab**
+farigab
 
-## 🙏 Agradecimentos
+## 🙏 Acknowledgements
 
-- PrimeNG pelos componentes UI incríveis
-- Time do Angular pelo framework fantástico
-- GitHub pelo acesso OAuth e API
+- PrimeNG for excellent UI components
+- The Angular team for a great framework
+- GitHub for OAuth and its API
 
 ---
 
-**Built with ❤️ using Angular 21**
+Built with ❤️ using Angular 21
